@@ -280,8 +280,8 @@ client.wait_for_result(timeout=rospy.Duration(120.0))
 
 ### Adjust Chunk Duration
 
-Smaller chunks = lower latency, more overhead
-Larger chunks = higher latency, less overhead
+Smaller chunks = lower latency, more overhead 
+Larger chunks = higher latency, less overhead 
 
 ```xml
 <param name="chunk_duration" value="5.0" />  <!-- 5 seconds for low latency -->

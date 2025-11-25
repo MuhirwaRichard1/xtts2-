@@ -46,7 +46,7 @@ def main():
         samples = np.frombuffer(pcm_data, dtype=np.int16).astype(np.float32) / 32768.0
         samples_list = samples.tolist()
 
-        # Send to Pepper speakers (mono = 1)
+        # Send to Pepper speakers (mono = 1).
         audio_dev.sendLocalBufferToOutput(samples_list, 1, sample_rate)
 
 if __name__ == "__main__":
