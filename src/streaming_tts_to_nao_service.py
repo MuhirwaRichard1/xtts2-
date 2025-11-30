@@ -233,11 +233,11 @@ class TTSServiceServer:
         """Send a single audio chunk to NAO"""
         temp_path = None
         try:
-            # Create temporary WAV file
+            # Create temporary WAV fil 
             with tempfile.NamedTemporaryFile(suffix=f"_chunk{chunk_num}.wav", delete=False) as temp_file:
                 temp_path = temp_file.name
             
-            # Write WAV file
+            # Write WAV fil
             with wave.open(temp_path, 'wb') as wav_file:
                 wav_file.setnchannels(1)  # Mono
                 wav_file.setsampwidth(2)  # 16-bit
